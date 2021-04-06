@@ -1,8 +1,0 @@
-tests/VerifyIssueSelenideTest.java
- tests.VerifyIssueSelenideTest
-pages/GitHubPage.java
- pages.GitHubPage
-tests/LambdaStepsTest.java
- tests.LambdaStepsTest
-tests/StepAnnotationTest.java
- tests.StepAnnotationTest
