@@ -15,13 +15,14 @@ public class VerifyIssueSelenideTest {
     private final static String repository = "eroshenkoam/allure-example";
     private final static int issueNumber = 68;
 
-    @Test void verifyIssueOnGitHub() {
+    @Test
+    public void verifyIssueOnGitHub() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open(url);
         $("[name='q']").setValue(repository).pressEnter();
         $("ul.repo-list li a").click();
         $(byText("Issues")).click();
-        $("#issue_"+issueNumber+"_link").should(Condition.exist);
+        $("#issue_"+ issueNumber +"_link").should(Condition.exist);
     }
 }

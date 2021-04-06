@@ -26,7 +26,7 @@ public class LambdaStepsTest {
             open(url);
         });
 
-        step("Open Repository "+repository, () -> {
+        step("Open Repository "+ repository, () -> {
                     $("[name='q']").setValue(repository).pressEnter();
                     $("ul.repo-list li a").click();
                 });
@@ -35,7 +35,7 @@ public class LambdaStepsTest {
                     $(byText("Issues")).click();
                 });
 
-        step("Verify Issue "+issueNumber+" exists", () -> {
+        step("Verify Issue "+ issueNumber +" exists", () -> {
             $("#issue_" + issueNumber + "_link").should(Condition.exist);
         });
 
