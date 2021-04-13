@@ -8,7 +8,9 @@ repositories {
 }
 
 def selenideVersion = "5.19.0",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    allureVersion = "2.13.8"
+
 
 allure {
     autoconfigure = true
@@ -24,6 +26,8 @@ dependencies {
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
             "com.github.javafaker:javafaker:1.0.2",
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             'io.qameta.allure:allure-selenide:2.13.8',
             'org.aspectj:aspectjweaver:1.9.5',
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
